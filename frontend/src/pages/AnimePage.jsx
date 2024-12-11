@@ -12,7 +12,7 @@ const AnimePage = () => {
 
     const fetchAnimeDetails = async (id) => {
       try {
-        const response = await fetch(`http://localhost:5000/api/anime/${id}`);
+        const response = await fetch(`https://mood-anime-backend.onrender.com/api/anime/${id}`);
         const data = await response.json();
 
         console.log(data);
