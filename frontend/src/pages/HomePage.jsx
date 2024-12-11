@@ -17,15 +17,15 @@ const HomePage = () => {
 
     const fetchData = async () => {
       try {
-        const airingResponse = await fetch('http://localhost:5000/api/airing');
+        const airingResponse = await fetch('https://mood-anime-backend.onrender.com/api/airing');
         const airingData = await airingResponse.json();
         setAiringAnime(airingData);
 
-        const upcomingResponse = await fetch('http://localhost:5000/api/upcoming');
+        const upcomingResponse = await fetch('https://mood-anime-backend.onrender.com/api/upcoming');
         const upcomingData = await upcomingResponse.json();
         setUpcomingAnime(upcomingData);
 
-        const popularResponse = await fetch('http://localhost:5000/api/popular');
+        const popularResponse = await fetch('https://mood-anime-backend.onrender.com/api/popular');
         const popularData = await popularResponse.json();
         setPopularAnime(popularData);
       } catch (error) {
