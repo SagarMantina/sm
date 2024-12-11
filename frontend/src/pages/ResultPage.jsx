@@ -12,7 +12,7 @@ function ResultPage() {
     console.log("Fetching data");
     const fetchAnimeByMood = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/mood/${mood}`);
+        const response = await fetch(`https://mood-anime-backend.onrender.com/api/mood/${mood}`);
         if (!response.ok) {
           throw new Error('Failed to fetch anime data');
         }
